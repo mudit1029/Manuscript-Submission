@@ -18,7 +18,6 @@
 </head>
 <body>
 	<header>
-		<br>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2">
@@ -37,19 +36,19 @@
         	</div>
 		</div>
 		<nav>
-     		<a href="#">Home</a>
+     		<a href="/">Home</a>
             <a href="#">News</a>
             <a class="arrow" href="#">Browse</a>
            	<div class="dropdown">
             	<a class="arrow" href="#">Journal Info</a>
             	<div class="dropdown-content">
-	            	<a href="#">About Journal</a>
-	            	<a href="#">Publication Ethics</a>
-            		<a href="#">Peer Review Process</a>
+	            	<a href="{% url 'ije:aj' %}">About Journal</a>
+	            	<a href="{% url 'ije:pe' %}">Publication Ethics</a>
+            		<a href="{% url 'ije:prp' %}">Peer Review Process</a>
 	            </div>
 	        </div>    	
             <a href="#">Guide For Authors</a>
-            <a href="#">Submit ManuScript</a>
+            <a href="#">Submit Manuscript</a>
             <a href="#">Reviewers</a>
             <a href="#">Contact Us</a>
        	</nav>

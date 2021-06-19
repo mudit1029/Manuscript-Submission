@@ -1,13 +1,31 @@
 {% extends 'ije/layout.html' %}
 
+{% load static %}
+
 {% block title %}
-	IJE
+
+	{% if prp %}
+		Peer Review Process
+	{% else %}	
+		IJE
+	{% endif %}
+	
 {% endblock %}	
 
 {% block head %}
 
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
 {% endblock %}
 
 {% block body %}
+
+	{% if prp %}
+		<br>
+		<div id="prp">
+			<p id="title">Peer Review Process</p>
+			<p id="data">{{ prp }}</p>
+		</div>
+	{% endif %}
 
 {% endblock %}

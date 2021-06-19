@@ -1,0 +1,31 @@
+#prp {
+	max-width: 80%;
+	font-size: 25px;
+	margin: auto auto;
+}
+
+#title {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: serif;
+	border-bottom: 2px solid black;
+}
+
+#peBody {
+	max-width: 80%;
+	margin: auto;
+}
+
+#peBody p {
+	font-size: 20px;
+}
+
+#peA  {
+	text-align: center;
+	font-size: 20px;
+}
+
+b {
+	font-size: 20px;
+}
