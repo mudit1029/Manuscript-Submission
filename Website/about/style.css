@@ -1,0 +1,122 @@
+*{
+    margin: 6px;
+    padding: 4px;
+}
+
+
+.para{
+    margin: 4px;
+    padding: 12px;
+}
+/* .container{
+    border-bottom: 2px solid black;
+} */
+.footer{
+    display: flex;
+    margin: 2px;
+    height: 400px;
+    margin-top: 0px;
+    margin-bottom: 0%;
+   border-top: 7px solid rgb(22, 1, 22);
+    background-color: rgb(26, 81, 126);
+    border-bottom: 2px solid black;
+}
+.footer h2{
+    margin-left: 22px;
+    
+}
+.nav{
+    font-size: 15px;
+    list-style: none;
+    margin-left: 0.5px;
+    display: block;
+    height: 380px;
+    width: 270px;
+   
+    /* border: 2px solid black;
+    background-color: blue; */
+    
+
+}
+.nav ul, li{
+    list-style: none;
+    font-size: 20px;
+    margin: 2px;
+    color: white;
+}
+.nav ul, li, a{
+    font-size: 15px;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+.news{
+    font-size: 15px;
+    margin-left: 0.5px;
+    padding: 12px;
+    display: block;
+    height: 350px;
+    width: 170px;
+    /* border: 2px solid black;
+    background-color: blue;  */
+}
+.news p{
+    color: white;
+}
+.history{
+    font-size: 15px;
+    margin-top: 30px;
+    padding: 12px;
+    margin-left: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 350px;
+    width: 170px;
+    /* border: 2px solid black;
+    background-color: blue; */
+
+}
+.history p{
+    color: white;
+}
+.newslte{
+    font-size: 15px;
+    margin-left: 0.5px;
+    padding: 12px;
+    display: block;
+    height: 350px;
+    width: 220px;
+    /* border: 2px solid black;
+    background-color: blue; */
+}
+.newslte p{
+    color: white;
+}
+
+.inp{
+    font-size: 16px;
+    border-radius: 4px;
+    /* border: 2px solid black; */
+}
+.btn{
+    font-size: 5px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    background: #000080;
+}
+.btn:hover{
+    font-size: 7px;
+    background: #0000cd;
+    cursor: pointer;
+}
+.frt{
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    background: maroon;
+    /* width: 400px; */
+}
