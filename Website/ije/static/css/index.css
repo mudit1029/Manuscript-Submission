@@ -1,6 +1,5 @@
-#prp {
+#prp , .about {
 	max-width: 80%;
-	font-size: 25px;
 	margin: auto auto;
 }
 
@@ -17,13 +16,13 @@
 	margin: auto;
 }
 
-#peBody p {
+#peBody p , #data {
 	font-size: 20px;
 }
 
 #peA  {
 	text-align: center;
-	font-size: 20px;
+	font-size: 25px;
 }
 
 b {

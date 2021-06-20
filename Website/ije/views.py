@@ -12,7 +12,7 @@ def prp(request):
 		})
 
 def aj(request):
-	pass
+	return render(request, "ije/aj.html")
 
 def pe(request):
 	return render(request, "ije/pe.html")	
