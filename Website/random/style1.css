@@ -1,0 +1,15 @@
+*{
+    margin: 4px;
+    padding: 4px;
+}
+
+.text{
+   display: flex;
+   justify-content: center;
+   background: rgb(236, 236, 247);
+}
+.firms{
+    border-bottom: 2px solid black;
+    
+    padding: 12px;
+}
