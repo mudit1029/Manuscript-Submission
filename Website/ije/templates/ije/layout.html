@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">
-    <!-- CSS only -->
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 	{% block head %}
@@ -38,9 +38,9 @@
 		<nav>
      		<a href="/">Home</a>
             <a href="#">News</a>
-            <a class="arrow" href="#">Browse</a>
+            <a class="arrow">Browse</a>
            	<div class="dropdown">
-            	<a class="arrow" href="#">Journal Info</a>
+            	<a class="arrow">Journal Info</a>
             	<div class="dropdown-content">
 	            	<a href="{% url 'ije:aj' %}">About Journal</a>
 	            	<a href="{% url 'ije:pe' %}">Publication Ethics</a>
@@ -56,5 +56,13 @@
 	
 	{% block body %}
 	{% endblock %}
+
+	<footer>
+		<div id="foot">
+			<br>
+	        <h6>Copyright © 2021 - All Rights Reserved</h6>
+	        <br>
+	    </div>    
+    </footer>
 </body>
 </html>
