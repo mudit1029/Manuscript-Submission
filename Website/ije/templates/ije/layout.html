@@ -37,8 +37,6 @@
 		</div>
 		<nav>
      		<a href="/">Home</a>
-            <a href="#">News</a>
-            <a class="arrow">Browse</a>
            	<div class="dropdown">
             	<a class="arrow">Journal Info</a>
             	<div class="dropdown-content">
@@ -47,9 +45,9 @@
             		<a href="{% url 'ije:prp' %}">Peer Review Process</a>
 	            </div>
 	        </div>    	
-            <a href="#">Guide For Authors</a>
+            <a href="{% url 'ije:gfa' %}">Guide For Authors</a>
             <a href="#">Submit Manuscript</a>
-            <a href="#">Reviewers</a>
+            <a href="{% url 'ije:review' %}">Reviewers</a>
             <a href="#">Contact Us</a>
        	</nav>
 	</header>
