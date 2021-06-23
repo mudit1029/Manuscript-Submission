@@ -15,4 +15,16 @@ def aj(request):
 	return render(request, "ije/aj.html")
 
 def pe(request):
-	return render(request, "ije/pe.html")	
+	return render(request, "ije/pe.html")
+
+def gfa(request):
+	gfa = "1"
+	return render(request, 'ije/aj.html', {
+		'gfa': gfa
+		})
+
+def review(request):
+	review = "1"
+	return render(request, 'ije/index.html', {
+		'review': review
+		})				

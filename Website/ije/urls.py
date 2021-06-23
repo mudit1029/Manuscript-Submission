@@ -8,4 +8,6 @@ urlpatterns = [
 	path('journal-info/peer-review-process/', views.prp, name="prp"),
 	path('journal-info/about-journal/', views.aj, name="aj"),
 	path('journal-info/publication-ethics/', views.pe, name="pe"),
+	path('guide-for-authors/', views.gfa, name="gfa"),
+	path('reviewers/', views.review, name="review"),
 ]
