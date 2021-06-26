@@ -28,3 +28,6 @@ def review(request):
 	return render(request, 'ije/index.html', {
 		'review': review
 		})				
+
+def login(request):
+	return render(request, "ije/login.html")	

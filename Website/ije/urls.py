@@ -10,4 +10,5 @@ urlpatterns = [
 	path('journal-info/publication-ethics/', views.pe, name="pe"),
 	path('guide-for-authors/', views.gfa, name="gfa"),
 	path('reviewers/', views.review, name="review"),
+	path('login/', views.login , name="login"),
 ]
