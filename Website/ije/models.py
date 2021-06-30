@@ -18,6 +18,5 @@ class Manuscript(models.Model):
 	classification =  models.CharField(max_length=64)
 	abstract =  models.CharField(max_length=120)
 	keywords =  models.CharField(max_length=120)
-
 	def __str__(self):
 		return (f"{self.user} :- {self.title}")

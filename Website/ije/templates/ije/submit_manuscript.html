@@ -14,63 +14,64 @@
   <div class="reg">
     <h2 class="heading">Submit Manuscript</h2>
     <div class="title">Author Details</div>
-    <form action="#">
+    <form action="{% url 'ije:submit_manuscript' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
       <div class="user-details">
         <div class="input-box">
           <span class="details">Author First Name</span>
-          <input type="text"  required>
+          <input type="text" name="fname"  required>
         </div>
         <div class="input-box">
           <span class="details">Author Last Name</span>
-          <input type="text"  required>
+          <input type="text" name="lname"  required>
         </div>
         <div class="input-box">
           <span class="details">Author Email</span>
-          <input type="email"  required>
+          <input type="email" name="email"  required>
         </div>
         <div class="input-box">
           <span class="details">Alternate Email</span>
-          <input type="email" required>
+          <input type="email" name="a_email" required>
         </div>
         <div class="input-box">
           <span class="details">Phone Number</span>
-          <input type="number"  required>
+          <input type="number" name="number"  required>
         </div>
         
         <div class="input-box">
           <span class="details">Author Region</span>
-          <input type="text"  required>
+          <input type="text" name="region"  required>
         </div>
       </div>
     <div class="title">Manuscript Details</div>
       <div class="user-details">
         <div class="input-box">
           <span class="details">Title</span>
-          <input type="text"  required>
+          <input type="text" name="title"  required>
         </div>
         <div class="input-box">
           <span class="details">Article Type</span>
-          <input type="text"  required>
+          <input type="text" name="type"  required>
         </div>
         <div class="input-box">
           <span class="details">Special Issue Title</span>
-          <input type="text"  required>
+          <input type="text" name="stitle"  required>
         </div>
         <div class="input-box">
           <span class="details">Classification</span>
-          <input type="text"  required>
+          <input type="text" name="classification"  required>
         </div>
         <div class="input-box">
           <span class="details">Abstract</span>
-          <textarea name="text" id="" cols="30" rows="10"></textarea>
+          <textarea name="abstract" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="input-box">
           <span class="details">Keywords</span>
-          <textarea name="text" id="" cols="30" rows="10"></textarea>
+          <textarea name="keywords" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="input-box">
           <span class="details">Attach Your File</span>
-          <input type="file" placeholder="" required>
+          <input type="file" name="file" placeholder="">
         </div>
         <div>
           <button class="btn">Submit</button>

@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import CustomUser
+from .models import CustomUser , Manuscript
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.core.files.storage import FileSystemStorage
 from django.contrib.auth import login , logout , authenticate
 # Create your views here.
 def index(request):
@@ -85,4 +86,32 @@ def signIn(request):
 	return render(request, "ije/login.html")	
 
 def submit_manuscript(request):
-	return render(request, "ije/submit_manuscript.html")	
+	if request.method == 'POST':
+		password = "random"
+		fname = request.POST["fname"]
+		lname = request.POST["lname"]
+		email = request.POST["email"]
+		a_email = request.POST["a_email"]
+		number = request.POST["number"]
+		region = request.POST["region"]
+		user = CustomUser.objects.create_user(email,email,password)
+		user.first_name = fname
+		user.last_name = lname
+		user.alternate_email = a_email
+		user.number = number
+		user.region = region
+		user.save()
+
+		title = request.POST["title"]
+		typee = request.POST["type"]
+		stitle = request.POST["stitle"]
+		classification = request.POST["classification"]
+		abstract = request.POST["abstract"]
+		keywords = request.POST["keywords"]
+		file = request.FILES["file"]
+		fs = FileSystemStorage()
+		fs.save(file.name, file)
+		data = Manuscript(user=user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords)
+		data.save()
+		return render(request, "ije/index.html")
+	return render(request, "ije/submit_manuscript.html")
