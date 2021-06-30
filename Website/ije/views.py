@@ -31,3 +31,6 @@ def review(request):
 
 def login(request):
 	return render(request, "ije/login.html")	
+
+def submit_manuscript(request):
+	return render(request, "ije/submit_manuscript.html")	

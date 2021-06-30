@@ -11,4 +11,5 @@ urlpatterns = [
 	path('guide-for-authors/', views.gfa, name="gfa"),
 	path('reviewers/', views.review, name="review"),
 	path('login/', views.login , name="login"),
+	path('submit-manuscript/', views.submit_manuscript , name="submit_manuscript"),
 ]

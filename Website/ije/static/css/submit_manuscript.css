@@ -14,12 +14,12 @@ body{
 
 }
 .reg{
-   
+    margin: 35px 0px 35px 0px;   
     max-width: 850px;
     width: 100%;
     background: white;
     padding: 25px 30px;
-    border-radius: 5px;
+    border-radius: 25px;
 
 }
 .reg .title{
@@ -73,7 +73,9 @@ form .user-details .input-box{
     border-color: #9b59b6;
 }
 .heading{
-    border-bottom: 1px solid black;
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 2px solid black;
 }
 .user-details .input-box textarea{
     outline: none;
