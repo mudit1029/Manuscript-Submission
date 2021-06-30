@@ -12,19 +12,23 @@
 <body>
     <div class="container">
         <div class="log">
+            {{ message }}
             <h2>User login</h2>
-            <div class="box">
-                <input type="email" name="name", placeholder="Enter email">    
-            </div>
-            <div class="box">
-                <input type="password" name="email", placeholder="Enter password">
-            </div>
-            
-            <button class="btn">Submit</button>
-            <p class="para">Don't have an account 
-                <a href="#" class="reg">Register</a>  
-                here         
-            </p> 
+            <form action="{% url 'ije:login' %}" method="post">
+                {% csrf_token %}
+                <div class="box">
+                    <input type="email" name="email", placeholder="Enter Your Email">    
+                </div>
+                <div class="box">
+                    <input type="password" name="password", placeholder="Enter Your password">
+                </div>
+                
+                <button class="btn">Submit</button>
+                <p class="para">Don't have an account 
+                    <a href="#" class="reg">Register</a>  
+                    here         
+                </p> 
+            </form>    
         </div> 
     </div>
 </body>
