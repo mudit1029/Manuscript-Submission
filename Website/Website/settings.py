@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-!^_!-*)fczgcfy!-6t&^@$6#jzj)%c00dr1uv28mi))1vh8%i6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+AUTH_USER_MODEL = "ije.CustomUser"
+
 ALLOWED_HOSTS = []
 
 
@@ -124,3 +126,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = "ije/static/uploads/"
