@@ -12,22 +12,22 @@
 <body>
     <div class="container">
         <div class="log">
-            {{ message }}
+            <span id="message">{{ message }}</span>
             <h2>User login</h2>
             <form action="{% url 'ije:login' %}" method="post">
                 {% csrf_token %}
                 <div class="box">
-                    <input type="email" name="email", placeholder="Enter Your Email">    
+                    <input type="email" name="email", placeholder="Enter Your Email" required="true" value="{{email}}">    
                 </div>
                 <div class="box">
-                    <input type="password" name="password", placeholder="Enter Your password">
+                    <input type="password" name="password", placeholder="Enter Your password" required="true">
                 </div>
                 
                 <button class="btn">Submit</button>
-                <p class="para">Don't have an account 
-                    <a href="#" class="reg">Register</a>  
-                    here         
-                </p> 
+                <br><br><br>
+                <a href="{% url 'ije:submit_manuscript' %}" class="reg">Submit Manuscript</a>
+                <br>
+                <span id="last">(Only for the users who don't have account registered yet).</span> 
             </form>    
         </div> 
     </div>

@@ -4,9 +4,15 @@
 }
 
 .link {
-	width: 90%;
+	padding: 15px;
 	margin: auto;
-	margin-top: 20px;
+	margin-top: 10px;
+	border: 1px solid black; 
+}
+
+#linkP {
+	text-align: center;
+	color: #b82601;
 }
 
 @media (max-width: 600px) {

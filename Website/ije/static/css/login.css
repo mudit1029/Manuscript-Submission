@@ -13,7 +13,7 @@ body {
     padding: 20px;
     /* margin: 12px; */
     width: 60%;
-    height: 60%;
+    height: 62%;
     background: #524549;
     border: 0.1px white;
     border-radius: 12px;
@@ -24,7 +24,19 @@ body {
     padding: 2px;
     margin-top: 2px;
 }
+
+#message {
+    font-size: 20px;
+    color: red;
+}
+
+#last {
+    color: white;
+    font-size: 20px;
+}
+
 h2{
+    margin-top: 5px;
     text-align: center;
     color: white;
     font-size: 40px;
@@ -60,7 +72,7 @@ input{
 .reg{
     text-decoration: none;
     color: limegreen;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
 	font-family: serif; 
 

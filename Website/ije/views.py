@@ -76,7 +76,8 @@ def signIn(request):
 
 			#Return login page again with a message "Invalid Credentials"
 			return render(request, "ije/login.html",{
-			"message": "Password Is Incorrect"
+			"message": "Password Is Incorrect",
+			"email": email
 			})
 
 		# When user set to login return the user to the index page of movies app.		
