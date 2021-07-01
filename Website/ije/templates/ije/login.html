@@ -17,7 +17,7 @@
             <form action="{% url 'ije:login' %}" method="post">
                 {% csrf_token %}
                 <div class="box">
-                    <input type="email" name="email", placeholder="Enter Your Email" required="true" value="{{email}}">    
+                    <input autofocus="true" type="email" name="email", placeholder="Enter Your Email" required="true" value="{{email}}">    
                 </div>
                 <div class="box">
                     <input type="password" name="password", placeholder="Enter Your password" required="true">

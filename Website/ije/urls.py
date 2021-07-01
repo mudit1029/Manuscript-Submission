@@ -12,4 +12,6 @@ urlpatterns = [
 	path('reviewers/', views.review, name="review"),
 	path('login/', views.signIn , name="login"),
 	path('submit-manuscript/', views.submit_manuscript , name="submit_manuscript"),
+	path('details/', views.details , name="details"),
+	path('logout/', views.signout , name="signout"),
 ]

@@ -8,82 +8,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Manuscript</title>
     <link rel="stylesheet" href="{% static 'css/submit_manuscript.css' %}">
+    <style type="text/css">
+      
+      {% if request.user.is_authenticated %}
+
+          #form1 {
+            display: none;
+          }
+
+      {% else %}    
+
+          #form2 {
+            display: none;
+          }
+
+      {% endif %} 
+    </style>
+
 </head>
 <body>
  
   <div class="reg">
     <h2 class="heading">Submit Manuscript</h2>
-    <div class="title">Author Details</div>
-    <form action="{% url 'ije:submit_manuscript' %}" method="post" enctype="multipart/form-data">
+    <form id="form1" action="{% url 'ije:submit_manuscript' %}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <div class="user-details">
-        <div class="input-box">
-          <span class="details">Author First Name</span>
-          <input type="text" name="fname"  required>
+      <div id="hide">
+        <div class="title">Author Details</div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Author First Name</span>
+            <input class="hide1" type="text" name="fname"  required value="{{fname}}">
+          </div>
+          <div class="input-box">
+            <span class="details">Author Last Name</span>
+            <input class="hide1" type="text" name="lname"  required value="{{lname}}">
+          </div>
+          <div class="input-box">
+            <span class="details">Author Email</span>
+            <input class="hide1" type="email" name="email"  required value="{{email}}">
+          </div>
+          <div class="input-box">
+            <span class="details">Alternate Email</span>
+            <input type="email" name="a_email" required class="hide1" value="{{a_email}}">
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input class="hide1" type="number" name="number"  required value="{{number}}">
+          </div>
+          <div class="input-box">
+            <span class="details">Author Region</span>
+            <input class="hide1" type="text" name="region"  required value="{{region}}">
+          </div>
+          <div class="input-box">
+            <span class="details">Create Password <span class="pdm">{{password}}</span></span>
+            <input class="hide1" type="password" name="password"  required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password <span class="pdm">{{confirm}}</span></span>
+            <input class="hide1" type="password" name="confirm"  required>
+          </div>
         </div>
-        <div class="input-box">
-          <span class="details">Author Last Name</span>
-          <input type="text" name="lname"  required>
-        </div>
-        <div class="input-box">
-          <span class="details">Author Email</span>
-          <input type="email" name="email"  required>
-        </div>
-        <div class="input-box">
-          <span class="details">Alternate Email</span>
-          <input type="email" name="a_email" required>
-        </div>
-        <div class="input-box">
-          <span class="details">Phone Number</span>
-          <input type="number" name="number"  required>
-        </div>
-        <div class="input-box">
-          <span class="details">Author Region</span>
-          <input type="text" name="region"  required>
-        </div>
-        <div class="input-box">
-          <span class="details">Create Password</span>
-          <input type="password" name="password"  required>
-        </div>
-        <div class="input-box">
-          <span class="details">Confirm Password</span>
-          <input type="password" name="confirm"  required>
-        </div>
-      </div>
+      </div>  
     <div class="title">Manuscript Details</div>
       <div class="user-details">
         <div class="input-box">
           <span class="details">Title</span>
-          <input type="text" name="title"  required>
+          <input type="text" name="title"  required value="{{title}}">
         </div>
         <div class="input-box">
           <span class="details">Article Type</span>
-          <input type="text" name="type"  required>
+          <input type="text" name="type"  required value="{{typee}}">
         </div>
         <div class="input-box">
           <span class="details">Special Issue Title</span>
-          <input type="text" name="stitle"  required>
+          <input type="text" name="stitle"  required value="{{stitle}}">
         </div>
         <div class="input-box">
           <span class="details">Classification</span>
-          <input type="text" name="classification"  required>
+          <input type="text" name="classification"  required value="{{classification}}">
         </div>
         <div class="input-box">
           <span class="details">Abstract</span>
-          <textarea name="abstract" id="" cols="30" rows="10"></textarea>
+          <textarea name="abstract" cols="30" rows="10" required="true"></textarea>
         </div>
         <div class="input-box">
           <span class="details">Keywords</span>
-          <textarea name="keywords" id="" cols="30" rows="10"></textarea>
+          <textarea name="keywords" cols="30" rows="10" required="true"></textarea>
         </div>
         <div class="input-box">
-          <span class="details">Attach Your File</span>
-          <input type="file" name="file" placeholder="">
+          <span class="details">Attach Your File <span class="pdm">{{file}}</span></span>
+          <input type="file" name="file" placeholder="" required="true">
         </div>
         <div>
           <button class="btn">Submit</button>
         </div>
       </div>
+    </form>
+
+    <form id="form2" action="{% url 'ije:submit_manuscript' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+         <div class="title">Manuscript Details</div>
+        
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Title</span>
+          <input type="text" name="title"  required value="{{title}}">
+        </div>
+        <div class="input-box">
+          <span class="details">Article Type</span>
+          <input type="text" name="type"  required value="{{typee}}">
+        </div>
+        <div class="input-box">
+          <span class="details">Special Issue Title</span>
+          <input type="text" name="stitle"  required value="{{stitle}}">
+        </div>
+        <div class="input-box">
+          <span class="details">Classification</span>
+          <input type="text" name="classification"  required value="{{classification}}">
+        </div>
+        <div class="input-box">
+          <span class="details">Abstract</span>
+          <textarea name="abstract" cols="30" rows="10" required="true"></textarea>
+        </div>
+        <div class="input-box">
+          <span class="details">Keywords</span>
+          <textarea name="keywords" cols="30" rows="10" required="true"></textarea>
+        </div>
+        <div class="input-box">
+          <span class="details">Attach Your File <span class="pdm">{{file}}</span></span>
+          <input type="file" name="file" placeholder="" required="true">
+        </div>
+        <div>
+          <button class="btn">Submit</button>
+        </div>
+      </div>
+
     </form>
   </div>
 </body>

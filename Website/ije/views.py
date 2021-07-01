@@ -81,38 +81,90 @@ def signIn(request):
 			})
 
 		# When user set to login return the user to the index page of movies app.		
-		return HttpResponseRedirect(reverse("ije:index"))
+		return HttpResponseRedirect(reverse("ije:details"))
 
 	# Open login page when the user method = GET.			
 	return render(request, "ije/login.html")	
 
 def submit_manuscript(request):
-	if request.method == 'POST':
-		password = "random"
-		fname = request.POST["fname"]
-		lname = request.POST["lname"]
-		email = request.POST["email"]
-		a_email = request.POST["a_email"]
-		number = request.POST["number"]
-		region = request.POST["region"]
-		user = CustomUser.objects.create_user(email,email,password)
-		user.first_name = fname
-		user.last_name = lname
-		user.alternate_email = a_email
-		user.number = number
-		user.region = region
-		user.save()
+	if request.method == 'POST' :
+		if not request.user.is_authenticated :
+			fname = request.POST["fname"]
+			lname = request.POST["lname"]
+			email = request.POST["email"]
+			a_email = request.POST["a_email"]
+			number = request.POST["number"]
+			region = request.POST["region"]
+			title = request.POST["title"]
+			typee = request.POST["type"]
+			stitle = request.POST["stitle"]
+			classification = request.POST["classification"]
+			abstract = request.POST["abstract"]
+			keywords = request.POST["keywords"]
+
+
+			password = request.POST["password"]
+			confirm = request.POST["confirm"]
+			if password != confirm :
+				return render(request, "ije/submit_manuscript.html", {
+					"fname": fname,
+					"lname": lname,
+					"email": email,
+					"a_email": a_email,
+					"number": number,
+					"region": region,
+					"title": title,
+					"typee": typee,
+					"stitle": stitle,
+					"classification": classification,
+					"password": "(Password Did Not Match)",
+					"confirm": "(Password Did Not Match)",
+					"file": "(Please Attach Your File Again)",
+					})
+
+
+			user = CustomUser.objects.create_user(email,email,password)
+			user.first_name = fname
+			user.last_name = lname
+			user.alternate_email = a_email
+			user.number = number
+			user.region = region
+			user.save()
+
+			file = request.FILES["file"]
+			fs = FileSystemStorage()
+			file = fs.save(file.name, file)
+			fileurl = fs.url(file)
+			data = Manuscript(user=user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords , file="/static/uploads"+fileurl)
+			data.save()
+			login(request, user)
+			return HttpResponseRedirect(reverse("ije:details"))
 
 		title = request.POST["title"]
 		typee = request.POST["type"]
 		stitle = request.POST["stitle"]
 		classification = request.POST["classification"]
 		abstract = request.POST["abstract"]
-		keywords = request.POST["keywords"]
+		keywords = request.POST["keywords"]	
+
 		file = request.FILES["file"]
 		fs = FileSystemStorage()
-		fs.save(file.name, file)
-		data = Manuscript(user=user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords)
+		file = fs.save(file.name, file)
+		fileurl = fs.url(file)
+		data = Manuscript(user=request.user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords , file="/static/uploads"+fileurl)
 		data.save()
-		return render(request, "ije/index.html")
+		return HttpResponseRedirect(reverse("ije:details"))
 	return render(request, "ije/submit_manuscript.html")
+
+def details(request):
+	if not request.user.is_authenticated :
+		return HttpResponseRedirect(reverse("ije:index"))
+	user = request.user
+	data = Manuscript.objects.all().filter(user=user)
+	return render(request, "ije/details.html", {
+		"data": data
+		})
+
+def signout(request):
+	logout(request)
+	return HttpResponseRedirect(reverse("ije:index"))	

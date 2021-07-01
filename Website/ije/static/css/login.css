@@ -64,6 +64,7 @@ input{
     font-weight: bold;
 	font-family: serif; 
     color: white;
+    cursor: pointer;
 }
 .btn:hover{
     background: #3b3b3b;
