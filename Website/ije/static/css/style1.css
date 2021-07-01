@@ -5,9 +5,15 @@
 
 .link {
 	padding: 15px;
+	width: 90%;
 	margin: auto;
-	margin-top: 10px;
-	border: 1px solid black; 
+	border: 1px solid black;
+	border-radius: 20px; 
+}
+
+.linkAA {
+	font-size: 20px;
+	text-align: center;
 }
 
 #linkP {
