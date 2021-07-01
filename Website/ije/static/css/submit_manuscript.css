@@ -105,3 +105,39 @@ form .user-details .input-box{
     background: rgb(5, 46, 99);
     border: 1px solid rgb(177, 196, 204);
 }
+@media (max-width: 600px) {
+    .reg{
+   
+        max-width: 100%;
+    
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    
+    }
+    
+    .btn{
+        position: relative;
+        top: 7px;
+        right: 10px;
+        left: 168px;
+        margin-bottom: 15px;
+        margin-top: -18px;
+        padding: 6px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        border: 1px solid #9b59b6;
+        border-radius: 6px;
+        color: white;
+        background: #062f4f;
+        cursor: pointer;
+     }
+     .user-details .input-box input{
+         height: 35px;
+     }
+     
+     
+    }
+
