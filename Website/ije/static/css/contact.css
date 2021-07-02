@@ -1,0 +1,47 @@
+.con{
+    margin: 25px 5% 25px 5%;
+    width: 90%;
+    border-radius: 6px;
+    background-color: #f4f7fd;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid #062f4f;
+    font-weight: bold;
+	font-family: serif;
+}
+
+@media (max-width: 600px) {
+    .con {
+        width: auto;
+        margin: 25px 1% 25px 1%;
+    }
+}
+
+h1{
+    font-weight: bold;
+	font-family: serif; 
+    color:  #062f4f;
+    margin: 0px;
+    border-bottom: 2px solid rgb(1, 1, 49);
+}
+p{
+    margin: 4px;
+    font-size: 25px;
+    color: #b82601;
+}
+h5{
+    margin-bottom: 1px;
+    font-size: 25px;
+    color:  #062f4f;
+}
+
+.link {
+    font-size: 23px;    
+}
+
+h3{
+    margin-top: 25px;
+    margin-bottom: 2px;
+    color:  #062f4f;
+    border-bottom: #b82601;
+}
