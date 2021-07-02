@@ -108,6 +108,20 @@ def submit_manuscript(request):
 
 			password = request.POST["password"]
 			confirm = request.POST["confirm"]
+			if not len(number) == 10 :
+				return render(request, "ije/submit_manuscript.html", {
+					"fname": fname,
+					"lname": lname,
+					"email": email,
+					"a_email": a_email,
+					"number": number,
+					"region": region,
+					"title": title,
+					"typee": typee,
+					"stitle": stitle,
+					"classification": classification,
+					"num": "(10 Digits Only)"
+					})
 			if password != confirm :
 				return render(request, "ije/submit_manuscript.html", {
 					"fname": fname,
