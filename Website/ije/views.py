@@ -34,7 +34,19 @@ def review(request):
 	review = "1"
 	return render(request, 'ije/index.html', {
 		'review': review
-		})				
+		})	
+
+def aeb(request):
+	aeb = "1"
+	return render(request, 'ije/index.html', {
+		'aeb': aeb
+		})					
+
+def eb(request):
+	eb = "1"
+	return render(request, 'ije/index.html', {
+		'eb': eb
+		})
 
 def signIn(request):
 	if request.method == "POST":
