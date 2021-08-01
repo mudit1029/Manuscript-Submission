@@ -61,10 +61,17 @@
 	            	<a href="{% url 'ije:pe' %}">Publication Ethics</a>
             		<a href="{% url 'ije:prp' %}">Peer Review Process</a>
 	            </div>
+	        </div>
+	        <div class="dropdown">
+           		<a class="arrow">Board</a>
+           		<div class="dropdown-content">
+		           	<a href="{% url 'ije:eb' %}">Editorial Board</a>
+		           	<a href="{% url 'ije:aeb' %}">Advisory Editorial Board</a>
+	           		<a href="{% url 'ije:review' %}">Reviewers</a>
+	       		</div>
 	        </div>    	
             <a href="{% url 'ije:gfa' %}">Guide For Authors</a>
             <a href="{% url 'ije:submit_manuscript' %}">Submit Manuscript</a>
-            <a href="{% url 'ije:review' %}">Reviewers</a>
             <a href="{% url 'ije:contact' %}">Contact Us</a>
        	</nav>
 
