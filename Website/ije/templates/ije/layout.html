@@ -86,7 +86,16 @@
             		<a href="{% url 'ije:prp' %}">Peer Review Process</a>
 	            </div>
 	        </div> 
-	        <br> <br>  	
+	        <br> <br>  
+	        <div class="dropdown">
+           		<a class="arrow">Board</a>
+           		<div class="dropdown-content">
+		           	<a href="{% url 'ije:eb' %}">Editorial Board</a>
+		           	<a href="{% url 'ije:aeb' %}">Advisory Editorial Board</a>
+	           		<a href="{% url 'ije:review' %}">Reviewers</a>
+	       		</div>
+	        </div> 
+	        <br><br>	
             <a href="{% url 'ije:gfa' %}">Guide For Authors</a>
             <br><br>
             <a href="{% url 'ije:submit_manuscript' %}">Submit Manuscript</a>
