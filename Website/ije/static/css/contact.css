@@ -13,18 +13,28 @@
 @media (max-width: 600px) {
     .con {
         width: auto;
+        padding: 2px;
         margin: 25px 1% 25px 1%;
+    }
+    .con p {
+        font-size: 15px !important;
+    }
+}
+
+@media (min-width: 600px) {
+    .link {
+        font-size: 23px !important;
     }
 }
 
 h1{
     font-weight: bold;
-	font-family: serif; 
+	font-family: serif;
     color:  #062f4f;
     margin: 0px;
     border-bottom: 2px solid rgb(1, 1, 49);
 }
-p{
+.con p{
     margin: 4px;
     font-size: 25px;
     color: #b82601;
@@ -36,7 +46,7 @@ h5{
 }
 
 .link {
-    font-size: 23px;    
+    font-size: 14px;
 }
 
 h3{

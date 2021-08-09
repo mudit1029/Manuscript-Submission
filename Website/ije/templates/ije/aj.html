@@ -3,8 +3,14 @@
 {% load static %}
 
 {% block title %}
-	About Journal
-{% endblock %}	
+
+    {% if gfa %}
+        Guide For Authors
+    {% else %}
+	    About Journal
+	{% endif %}
+
+{% endblock %}
 
 {% block head %}
 
@@ -19,7 +25,7 @@
 		<div class="peBody">
 			<h1 id="title">Guidance For Authors</h1>
 			<p>Submission of a manuscript represents that it has neither been published nor submitted for publication elsewhere and is result of research carried out by author(s). Presentation in a conference and appearance in a symposium proceeding is not considered prior publication. </p>
-			<p>Authors are required to include a list describing all the symbols and abbreviations in the paper. Use of the international system of measurement units is mandatory. 
+			<p>Authors are required to include a list describing all the symbols and abbreviations in the paper. Use of the international system of measurement units is mandatory.
 			On-line submission of manuscripts results in faster publication process and is recommended. Instructions are given in the FIJMS web site:
 			</p>
 			<div id="peA">
@@ -30,13 +36,13 @@
 			<ol>
 				<b><li><b>Author Responsibility</b></li></b>
 				<p>The authors are exclusively responsible for the contents of their submissions, the validity of the experimental results
-				and must make sure that they have permission from all involved parties to make the data public.  
+				and must make sure that they have permission from all involved parties to make the data public.
 				It is the responsibility of each author to ensure that papers submitted to FIJMS are written with ethical standards in
 				mind, concerning plagiarism.</p>
 				<p>Please note that all submissions are thoroughly checked for plagiarism. If an attempt at plagiarism is found in a
 				published paper, the authors will be asked to issue a written apology to the authors of the original material. Any
 				paper which shows obvious signs of plagiarism will be automatically rejected and its authors will be banned for
-				duration of three years from publishing in FIJMS. The authors will receive proper notification if such a situation arises.  
+				duration of three years from publishing in FIJMS. The authors will receive proper notification if such a situation arises.
 				Information on what constitutes plagiarism is provided below. </p>
 
 				<b><li><b>Plagiarism: Definition and Context</b></li></b>
@@ -55,10 +61,10 @@
 				<b><li><b>Conflicts Of Interest</b></li></b>
 				<p>All authors are requested to disclose any actual or potential conflict of interest such as any financial, personal or
 				other relationships with other people or organizations concerning the submitted work that could inappropriately
-				influence, or be perceived to influence, their work.</p> 
+				influence, or be perceived to influence, their work.</p>
 				<b><li><b>Copyright And Permissions</b></li></b>
 				<p>By submitting a manuscript to the editor or publisher you are deemed to have granted permission to publish the
-				manuscript.</p> 
+				manuscript.</p>
 				<b><li><b>Proofs</b></li></b>
 				<p>Proofs will be sent via e‐mail as an Acrobat PDF (Portable Document Format) file. Acrobat Reader will be required in
 				order to read the PDF. This software can be downloaded from the following website:</p>
@@ -67,8 +73,8 @@
 				</div><br>
 				<p>This will enable the file to be opened, read on screen and printed out in order for any corrections to be added. To avoid delay in publication, corrected proofs should be faxed to the publisher within 48 hours of receipt.</p>
 			</ol>
-		</div>		
-	{% else %}	
+		</div>
+	{% else %}
 
 		<div class="peBody">
 			<br>
@@ -80,17 +86,17 @@
 			<br>
 			<h1 id="title">Aims and Scope</h1>
 			<p>The objective of the FIJMS is to provide a platform for communication of information among the world's scientific and technological community, scientists and engineers. This journal intends to be of interest and utility to researchers and practitioners in the academic, industrial and governmental sectors. All original research contributions of significant value in all areas of applied sciences discipline are welcome.</p>
-			<p>This journal will publish authoritative papers on theoretical and experimental researches and advanced applications embodying the results of extensive field, plant, laboratory or theoretical investigation or new interpretations of existing problems. It may also feature - when appropriate - research notes, technical notes, state-of-the-art survey type papers, short communications, letters to the editor, meeting schedules and conference announcements. The language of publication is English.  The abstracts should not exceed 250 words. 
+			<p>This journal will publish authoritative papers on theoretical and experimental researches and advanced applications embodying the results of extensive field, plant, laboratory or theoretical investigation or new interpretations of existing problems. It may also feature - when appropriate - research notes, technical notes, state-of-the-art survey type papers, short communications, letters to the editor, meeting schedules and conference announcements. The language of publication is English.  The abstracts should not exceed 250 words.
 			</p>
-			<p>All manuscripts will be initially checked for plagiarism and then peer-reviewed by qualified reviewers. The material should be presented clearly and concisely: 
-			Full papers must be based on completed original works of significant novelty. The papers are strictly limited in length, maximum 6 journal pages (including figures and tables). This means for the 1st 6 pages there is no page charges. However, lengthy contributions may be considered just for the exceeded 6 pages; that may require extra page charges. It is advised to keep papers limited to 3500 words. 
+			<p>All manuscripts will be initially checked for plagiarism and then peer-reviewed by qualified reviewers. The material should be presented clearly and concisely:
+			Full papers must be based on completed original works of significant novelty. The papers are strictly limited in length, maximum 6 journal pages (including figures and tables). This means for the 1st 6 pages there is no page charges. However, lengthy contributions may be considered just for the exceeded 6 pages; that may require extra page charges. It is advised to keep papers limited to 3500 words.
 			</p>
 			<p>Research notes are considered as short items that include theoretical or experimental results of immediate current interest. Technical notes are also considered as short items of enough technical acceptability with more rapid publication appeal. The length of a research or technical note is recommended not to exceed 2500 words or 4-6 journal pages (including figures and tables).  Review papers are only considered from highly qualified well-known authors generally assigned by the editorial board or editor-in-chief. Author of review papers should have high qualifications with distinct developed research area; an outstanding scholar with an extensive publications. Short communications and letters to the editor should contain a text of about 1000 words and whatever figures and tables that may be required to support the text. They include discussion of full papers and short items and should contribute to the original article by providing confirmation or additional interpretation. Discussion of papers will be referred to author(s) for reply and will concurrently be published with reply of author(s).</p>
 
 			<br>
 			<h1 id="title">Instructions for Authors</h1>
 			<p>Submission of a manuscript represents that it has neither been published nor submitted for publication elsewhere and is result of research carried out by author(s). Presentation in a conference and appearance in a symposium proceeding is not considered prior publication. </p>
-			<p>Authors are required to include a list describing all the symbols and abbreviations in the paper. Use of the international system of measurement units is mandatory. 
+			<p>Authors are required to include a list describing all the symbols and abbreviations in the paper. Use of the international system of measurement units is mandatory.
 			On-line submission of manuscripts results in faster publication process and is recommended. Instructions are given in the FIJMS web site:
 			</p>
 			<div id="peA">
@@ -101,13 +107,13 @@
 			<ol>
 				<b><li><b>Author Responsibility</b></li></b>
 				<p>The authors are exclusively responsible for the contents of their submissions, the validity of the experimental results
-				and must make sure that they have permission from all involved parties to make the data public.  
+				and must make sure that they have permission from all involved parties to make the data public.
 				It is the responsibility of each author to ensure that papers submitted to FIJMS are written with ethical standards in
 				mind, concerning plagiarism.</p>
 				<p>Please note that all submissions are thoroughly checked for plagiarism. If an attempt at plagiarism is found in a
 				published paper, the authors will be asked to issue a written apology to the authors of the original material. Any
 				paper which shows obvious signs of plagiarism will be automatically rejected and its authors will be banned for
-				duration of three years from publishing in FIJMS. The authors will receive proper notification if such a situation arises.  
+				duration of three years from publishing in FIJMS. The authors will receive proper notification if such a situation arises.
 				Information on what constitutes plagiarism is provided below. </p>
 
 				<b><li><b>Plagiarism: Definition and Context</b></li></b>
@@ -126,10 +132,10 @@
 				<b><li><b>Conflicts Of Interest</b></li></b>
 				<p>All authors are requested to disclose any actual or potential conflict of interest such as any financial, personal or
 				other relationships with other people or organizations concerning the submitted work that could inappropriately
-				influence, or be perceived to influence, their work.</p> 
+				influence, or be perceived to influence, their work.</p>
 				<b><li><b>Copyright And Permissions</b></li></b>
 				<p>By submitting a manuscript to the editor or publisher you are deemed to have granted permission to publish the
-				manuscript.</p> 
+				manuscript.</p>
 				<b><li><b>Proofs</b></li></b>
 				<p>Proofs will be sent via e‐mail as an Acrobat PDF (Portable Document Format) file. Acrobat Reader will be required in
 				order to read the PDF. This software can be downloaded from the following website:</p>
@@ -140,5 +146,5 @@
 				<br><br>
 			</ol>
 		</div>
-	{% endif %}	
-	{% endblock %}	
+	{% endif %}
+	{% endblock %}

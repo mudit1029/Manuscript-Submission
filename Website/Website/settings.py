@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for Website project.
 
@@ -27,7 +29,9 @@ DEBUG = True
 
 AUTH_USER_MODEL = "ije.CustomUser"
 
-ALLOWED_HOSTS = []
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

@@ -1,0 +1,39 @@
+#prp , .about {
+	max-width: 80%;
+	margin: auto auto;
+}
+
+#title {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: serif;
+	border-bottom: 2px solid black;
+}
+
+.peBody {
+	max-width: 80%;
+	margin: auto;
+}
+
+.peBody p , #data {
+	font-size: 20px;
+}
+
+#peA  {
+	text-align: center;
+	font-size: 20px;
+}
+
+#peA a {
+	text-decoration: none;
+	border: 2px solid #062f4f; 
+	color: white;
+	padding: 7px;
+	background-color: #062f4f;
+	border-radius: 30px;
+}
+
+b {
+	font-size: 20px;
+}

@@ -8,7 +8,7 @@
 	width: 90%;
 	margin: auto;
 	border: 1px solid black;
-	border-radius: 20px; 
+	border-radius: 20px;
 }
 
 .linkAA {
@@ -32,7 +32,7 @@
    display: flex;
    padding: 10px 20px 10px 20px;
    width: 90%;
-   margin: auto; 
+   margin: auto;
    justify-content: center;
    background: rgb(236, 236, 247);
 }
@@ -48,7 +48,7 @@
 }
 
 h4 {
-	font-family: cursive;
+	font-family: serif;
 }
 
 #PI , .manu h4 {

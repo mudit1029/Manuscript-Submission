@@ -1,0 +1,172 @@
+#firstimg , #secondimg {
+    width: 80px;
+}
+
+#menuBtn {
+    width: 100px;
+    height: 40px;
+    margin: 15px 0px 15px 0px;
+    cursor: pointer;
+}
+
+#lk {
+    text-align: center;
+}
+
+#lk button {
+    border-radius: 20px;
+    width: 20%;
+    padding: 8px;
+    margin: 15px 0px 15px 0px;
+}
+
+
+
+@media (max-width: 600px) {
+    #firstimg , #secondimg {
+    display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+}
+
+@media (min-width: 601px) {
+    #menuBtn {
+        display: none;
+    }
+}
+
+
+footer {
+    background-color: #062f4f;
+    color: white;
+}
+
+footer h6 {
+    margin: auto;
+    width: 50%;
+    padding: 10px; 
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.col-sm-2 {
+    text-align: center;
+}
+
+#heading {
+    margin-top: 20px;
+    margin-bottom: -5px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.user {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+
+.user a {
+    font-family: cursive;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    margin: 35px;
+    color: white;
+    font-size: 20px;
+    background-color: #062f4f;
+}
+
+.user a:hover {
+    color: white;
+    border: 4px solid white;
+}
+
+#nav1 {
+    background-color: #b82601;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+#nav1 a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    margin: 18px;
+    padding: 8px;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #b82601;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+nav a {
+    cursor: pointer;
+    border: 2px solid #b82601;
+    text-decoration: none;
+    color: white;
+    margin: 18px;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.arrow::after {
+    padding-left: 7px;
+    content: '\2193';
+}
+
+nav a:hover , #nav1 a:hover {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+header {
+    background-color: #062f4f;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  margin-top: 7px; 
+  display: none;
+  position: absolute;
+  background-color: #062f4f;
+  width: 180px;
+}
+
+
+#nav1 .dropdown-content a {
+    font-size: 15px;
+}
+
+#nav1 .dropdown-content a:hover {
+    color: grey;
+}
+
+.dropdown-content a {
+  padding: 5px 5px;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+}
+
+.dropdown-content a:hover {background-color: white; color: grey;}
+
+.dropdown:hover .dropdown-content {display: block;}

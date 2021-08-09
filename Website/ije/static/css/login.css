@@ -1,3 +1,28 @@
+@media (max-width: 600px) {
+    .container {
+        height:680px !important;
+    }
+
+    .log {
+        width: 100% !important;
+    }
+
+    h2 {
+        font-size: 30px !important;
+    }
+
+    input {
+        width: 90% !important;
+        font-size: 12px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .btn {
+        width:50% !important;
+        font-size: 15px !important;
+    }
+}
+
 body {
     height: 100%;
     background-image: linear-gradient(120deg, #062f4f,#b82601);
@@ -17,7 +42,7 @@ body {
     background: #524549;
     border: 0.1px white;
     border-radius: 12px;
-    
+
 }
 .box{
     margin: 4px;
@@ -41,7 +66,7 @@ h2{
     color: white;
     font-size: 40px;
     font-weight: bold;
-	font-family: serif; 
+	font-family: serif;
 }
 input{
     border: 1px solid black;
@@ -62,7 +87,7 @@ input{
     margin: 6px;
     padding: 15px;
     font-weight: bold;
-	font-family: serif; 
+	font-family: serif;
     color: white;
     cursor: pointer;
 }
@@ -75,12 +100,12 @@ input{
     color: limegreen;
     font-size: 20px;
     font-weight: bold;
-	font-family: serif; 
+	font-family: serif;
 
 }
 .para{
     font-size: 24px;
     color: white;
     font-weight: bold;
-	font-family: serif; 
+	font-family: serif;
 }

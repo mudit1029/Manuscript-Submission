@@ -13,23 +13,23 @@
     <div class="container">
         <div class="log">
             <span id="message">{{ message }}</span>
-            <h2>User login</h2>
+            <h2>User Login</h2>
             <form action="{% url 'ije:login' %}" method="post">
                 {% csrf_token %}
                 <div class="box">
-                    <input autofocus="true" type="email" name="email", placeholder="Enter Your Email" required="true" value="{{email}}">    
+                    <input autofocus="true" type="email" name="email", placeholder="Enter Your Email" required="true" value="{{email}}">
                 </div>
                 <div class="box">
                     <input type="password" name="password", placeholder="Enter Your password" required="true">
                 </div>
-                
+
                 <button class="btn">Submit</button>
                 <br><br><br>
                 <a href="{% url 'ije:submit_manuscript' %}" class="reg">Submit Manuscript</a>
                 <br>
-                <span id="last">(Only for the users who don't have account registered yet).</span> 
-            </form>    
-        </div> 
+                <span id="last">(Only for the users who don't have account registered yet).</span>
+            </form>
+        </div>
     </div>
 </body>
 </html>

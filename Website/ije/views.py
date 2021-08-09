@@ -13,7 +13,7 @@ def contact(request):
 	return render(request, "ije/contact.html")
 
 def prp(request):
-	data = "Once a paper is submitted online, editor in the related field as an expert should check the paper. After primary screening the paper send to reviewers. The reviewer respond has to be presented to Editorial board meeting for further evaluation. From the review process and editorial board evaluation we decide for revision or reject. In the case of a paper Editorial board is unable to judge the given comments by the reviewer and the revised paper. As author is asked for revision, the whole folder send to final referee for the exact judgment. Author at revision stage must prepare rebuttal letter for respond to itemized comments given by reviewer. Editorial board based on complete cycle of revision if the revision is satisfied may vote for acceptance."	
+	data = "Once a paper is submitted online, editor in the related field as an expert should check the paper. After primary screening the paper send to reviewers. The reviewer respond has to be presented to Editorial board meeting for further evaluation. From the review process and editorial board evaluation we decide for revision or reject. In the case of a paper Editorial board is unable to judge the given comments by the reviewer and the revised paper. As author is asked for revision, the whole folder send to final referee for the exact judgment. Author at revision stage must prepare rebuttal letter for respond to itemized comments given by reviewer. Editorial board based on complete cycle of revision if the revision is satisfied may vote for acceptance."
 	return render(request, "ije/index.html" ,{
 		"prp": data
 		})
@@ -34,13 +34,13 @@ def review(request):
 	review = "1"
 	return render(request, 'ije/index.html', {
 		'review': review
-		})	
+		})
 
 def aeb(request):
 	aeb = "1"
 	return render(request, 'ije/index.html', {
 		'aeb': aeb
-		})					
+		})
 
 def eb(request):
 	eb = "1"
@@ -56,13 +56,13 @@ def signIn(request):
 		password = request.POST["password"]
 
 		#Set the username field to the user provided username.
-		kwargs = {'email':email}	
+		kwargs = {'email':email}
 
-		# try to get the user by the user data.	
-		try :	
+		# try to get the user by the user data.
+		try :
 			user = CustomUser.objects.get(**kwargs)
 
-		# if the user does not exist in the database	
+		# if the user does not exist in the database
 		except CustomUser.DoesNotExist:
 
 			# Return the login page again with the provided data and with a message says "User Does Not Exist".
@@ -70,7 +70,7 @@ def signIn(request):
 				"message": "Email Is Incorrect"
 			})
 
-		"""# If the user activity status is false			
+		"""# If the user activity status is false
 		if user.is_active == False :
 
 			#return the register page With the below message and with an registeration form.
@@ -80,13 +80,13 @@ def signIn(request):
 				"button": "Register"
 				})	"""
 
-		# If the user provided password match the user password in the database					
+		# If the user provided password match the user password in the database
 		if user.check_password(password):
 
 			# Grant login to the user
 			login(request, user)
 
-		# Otherwise if the password did'nt match	
+		# Otherwise if the password did'nt match
 		else :
 
 			#Return login page again with a message "Invalid Credentials"
@@ -95,11 +95,11 @@ def signIn(request):
 			"email": email
 			})
 
-		# When user set to login return the user to the index page of movies app.		
+		# When user set to login return the user to the index page of movies app.
 		return HttpResponseRedirect(reverse("ije:details"))
 
-	# Open login page when the user method = GET.			
-	return render(request, "ije/login.html")	
+	# Open login page when the user method = GET.
+	return render(request, "ije/login.html")
 
 def submit_manuscript(request):
 	if request.method == 'POST' :
@@ -164,7 +164,7 @@ def submit_manuscript(request):
 			fs = FileSystemStorage()
 			file = fs.save(file.name, file)
 			fileurl = fs.url(file)
-			data = Manuscript(user=user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords , file="/static/uploads"+fileurl)
+			data = Manuscript(user=user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords , file="https://www.firmsjournals.com/static/uploads"+fileurl)
 			data.save()
 			login(request, user)
 			return HttpResponseRedirect(reverse("ije:details"))
@@ -174,13 +174,13 @@ def submit_manuscript(request):
 		stitle = request.POST["stitle"]
 		classification = request.POST["classification"]
 		abstract = request.POST["abstract"]
-		keywords = request.POST["keywords"]	
+		keywords = request.POST["keywords"]
 
 		file = request.FILES["file"]
 		fs = FileSystemStorage()
 		file = fs.save(file.name, file)
 		fileurl = fs.url(file)
-		data = Manuscript(user=request.user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords , file="/static/uploads"+fileurl)
+		data = Manuscript(user=request.user , title=title , article_type = typee , special_title=stitle , classification=classification , abstract=abstract , keywords=keywords , file="https://www.firmsjournals.com/static/uploads"+fileurl)
 		data.save()
 		return HttpResponseRedirect(reverse("ije:details"))
 	return render(request, "ije/submit_manuscript.html")
@@ -196,4 +196,4 @@ def details(request):
 
 def signout(request):
 	logout(request)
-	return HttpResponseRedirect(reverse("ije:index"))	
+	return HttpResponseRedirect(reverse("ije:index"))
